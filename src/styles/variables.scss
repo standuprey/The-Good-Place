@@ -1,0 +1,55 @@
+$ink: #333;
+$color-1: #77336f;
+$color-4: #376071;
+$input-required-bg: rgb(214, 205, 205);
+
+$theo1841: #443354;
+$deer-tulum: #443354;
+$cpes: #443354;
+$silex: #443354;
+
+$process: #172132;
+$process-accent: #1b2438;
+$services: #1f2130;
+$services-accent: #443354;
+$projects: #443354;
+$mission: #172130;
+$about: #1a2130;
+$contact: #172132;
+$project-transition-duration: 0.6s;
+/// Mixin to place items on a circle
+/// @author Hugo Giraudel
+/// @author Ana Tudor
+/// @param {Integer} $item-count - Number of items on the circle
+/// @param {Length} $circle-size - Large circle size
+/// @param {Length} $item-size - Single item size
+@mixin on-circle($item-count, $circle-size, $item-size) {
+  position: relative;
+  width: $circle-size;
+  height: $circle-size;
+  border-radius: 50%;
+  list-style: none;
+
+  > * {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $item-size;
+    height: $item-size;
+    margin: -($item-size / 2);
+
+    $angle: (360 / $item-count);
+    $rot: 240;
+
+    @for $i from 1 through $item-count {
+      &:nth-of-type(#{$i}) {
+        transform: rotate($rot * 1deg)
+          translate($circle-size / 2)
+          rotate($rot * -1deg);
+      }
+
+      $rot: $rot + $angle;
+    }
+  }
+}

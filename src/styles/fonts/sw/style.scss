@@ -1,0 +1,373 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?mvtsrv') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?mvtsrv') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?mvtsrv##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="sw-"], [class*=" sw-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sw-angle_up {
+  &:before {
+    content: $sw-angle_up; 
+  }
+}
+.sw-arrow {
+  &:before {
+    content: $sw-arrow; 
+  }
+}
+.sw-binance {
+  &:before {
+    content: $sw-binance;     
+    color: #f3ba2f;
+  }
+}
+.sw-binder {
+  &:before {
+    content: $sw-binder; 
+  }
+}
+.sw-bitfinex .path1 {
+  &:before {
+    content: $sw-bitfinex-path1;  
+    color: rgb(151, 197, 84);
+  }
+}
+.sw-bitfinex .path2 {
+  &:before {
+    content: $sw-bitfinex-path2;  
+    margin-left: -1.033203125em;  
+    color: rgb(112, 155, 48);
+  }
+}
+.sw-bitstamp {
+  &:before {
+    content: $sw-bitstamp;     
+    color: #14a049;
+  }
+}
+.sw-bittrex {
+  &:before {
+    content: $sw-bittrex;     
+    color: #0082d7;
+  }
+}
+.sw-book {
+  &:before {
+    content: $sw-book; 
+  }
+}
+.sw-broken_pen {
+  &:before {
+    content: $sw-broken_pen; 
+  }
+}
+.sw-carrot_down {
+  &:before {
+    content: $sw-carrot_down; 
+  }
+}
+.sw-carrot_left {
+  &:before {
+    content: $sw-carrot_left; 
+  }
+}
+.sw-carrot_right {
+  &:before {
+    content: $sw-carrot_right; 
+  }
+}
+.sw-carrot_up {
+  &:before {
+    content: $sw-carrot_up; 
+  }
+}
+.sw-check {
+  &:before {
+    content: $sw-check; 
+  }
+}
+.sw-cog {
+  &:before {
+    content: $sw-cog; 
+  }
+}
+.sw-coins {
+  &:before {
+    content: $sw-coins; 
+  }
+}
+.sw-copy {
+  &:before {
+    content: $sw-copy; 
+  }
+}
+.sw-couchdb {
+  &:before {
+    content: $sw-couchdb;     
+  }
+}
+.sw-cryptopia {
+  &:before {
+    content: $sw-cryptopia;     
+  }
+}
+.sw-dot_empty {
+  &:before {
+    content: $sw-dot_empty; 
+  }
+}
+.sw-dot {
+  &:before {
+    content: $sw-dot; 
+  }
+}
+.sw-down .path1 {
+  &:before {
+    content: $sw-down-path1;  
+    color: rgb(0, 0, 0);
+  }
+}
+.sw-down .path2 {
+  &:before {
+    content: $sw-down-path2;  
+    margin-left: -1em;  
+    color: rgb(34, 31, 31);
+  }
+}
+.sw-gdax {
+  &:before {
+    content: $sw-gdax;     
+    color: #518dca;
+  }
+}
+.sw-gemini {
+  &:before {
+    content: $sw-gemini;     
+    color: #00dcfa;
+  }
+}
+.sw-hashtag_merge {
+  &:before {
+    content: $sw-hashtag_merge; 
+  }
+}
+.sw-hashtag {
+  &:before {
+    content: $sw-hashtag; 
+  }
+}
+.sw-history {
+  &:before {
+    content: $sw-history; 
+  }
+}
+.sw-kraken {
+  &:before {
+    content: $sw-kraken;     
+    color: #0088bd;
+  }
+}
+.sw-kucoin {
+  &:before {
+    content: $sw-kucoin;     
+    color: #0096e5;
+  }
+}
+.sw-law {
+  &:before {
+    content: $sw-law; 
+  }
+}
+.sw-lightbulb {
+  &:before {
+    content: $sw-lightbulb; 
+  }
+}
+.sw-list {
+  &:before {
+    content: $sw-list; 
+  }
+}
+.sw-lock {
+  &:before {
+    content: $sw-lock; 
+  }
+}
+.sw-magnifier {
+  &:before {
+    content: $sw-magnifier; 
+  }
+}
+.sw-market {
+  &:before {
+    content: $sw-market; 
+  }
+}
+.sw-merge {
+  &:before {
+    content: $sw-merge; 
+  }
+}
+.sw-new_order {
+  &:before {
+    content: $sw-new_order; 
+  }
+}
+.sw-order {
+  &:before {
+    content: $sw-order; 
+  }
+}
+.sw-paw {
+  &:before {
+    content: $sw-paw; 
+  }
+}
+.sw-pen {
+  &:before {
+    content: $sw-pen; 
+  }
+}
+.sw-piggy {
+  &:before {
+    content: $sw-piggy; 
+  }
+}
+.sw-pin {
+  &:before {
+    content: $sw-pin; 
+  }
+}
+.sw-plus {
+  &:before {
+    content: $sw-plus; 
+  }
+}
+.sw-poloniex {
+  &:before {
+    content: $sw-poloniex;     
+    color: #25979b;
+  }
+}
+.sw-profile {
+  &:before {
+    content: $sw-profile; 
+  }
+}
+.sw-refresh {
+  &:before {
+    content: $sw-refresh; 
+  }
+}
+.sw-session {
+  &:before {
+    content: $sw-session; 
+  }
+}
+.sw-share_android {
+  &:before {
+    content: $sw-share_android; 
+  }
+}
+.sw-share_ios {
+  &:before {
+    content: $sw-share_ios; 
+  }
+}
+.sw-sharp {
+  &:before {
+    content: $sw-sharp; 
+  }
+}
+.sw-silex {
+  &:before {
+    content: $sw-silex; 
+  }
+}
+.sw-spinner {
+  &:before {
+    content: $sw-spinner; 
+  }
+}
+.sw-star_full {
+  &:before {
+    content: $sw-star_full;     
+    color: #e2e909;
+  }
+}
+.sw-star {
+  &:before {
+    content: $sw-star; 
+  }
+}
+.sw-thumbsup_full {
+  &:before {
+    content: $sw-thumbsup_full; 
+  }
+}
+.sw-thumbsup {
+  &:before {
+    content: $sw-thumbsup; 
+  }
+}
+.sw-trash {
+  &:before {
+    content: $sw-trash; 
+  }
+}
+.sw-up .path1 {
+  &:before {
+    content: $sw-up-path1;  
+    color: rgb(0, 0, 0);
+  }
+}
+.sw-up .path2 {
+  &:before {
+    content: $sw-up-path2;  
+    margin-left: -1em;  
+    color: rgb(34, 31, 31);
+  }
+}
+.sw-wallet {
+  &:before {
+    content: $sw-wallet; 
+  }
+}
+.sw-x {
+  &:before {
+    content: $sw-x; 
+  }
+}
+.sw-xbtce {
+  &:before {
+    content: $sw-xbtce;     
+    color: #fff;
+  }
+}
+.sw-yobit {
+  &:before {
+    content: $sw-yobit;     
+    color: #00a9d2;
+  }
+}
+
