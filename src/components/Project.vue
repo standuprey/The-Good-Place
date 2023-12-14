@@ -5,14 +5,10 @@
     :data-project-class="project"
   >
     <div class="left-pan">
-      <div class="video-wrapper">
-        <video
-          class="video"
-          autoplay
-          playsinline
-          loop
-          muted
-          :src="`https://standupweb.net/tmp/thegoodplace/${mediaSource}`"
+      <div class="image-wrapper">
+        <img
+          class="img"
+          :src="mediaSource"
         />
       </div>
     </div>
@@ -69,7 +65,7 @@ export default {
 .left-pan {
   width: 80%;
 }
-.video {
+.img {
   max-width: 700px;
   width: 999px;
 }
@@ -78,9 +74,9 @@ export default {
   padding: 20px 0;
   font-weight: 700;
 }
-.video-wrapper {
+.image-wrapper {
   width: 100%;
-  video {
+  img {
     float: right;
   }
 }
@@ -90,7 +86,7 @@ export default {
     .right-pan {
       text-align: right;
     }
-    .video-wrapper video {
+    .image-wrapper img {
       float: left;
     }
   }

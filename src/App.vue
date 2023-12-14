@@ -1,4 +1,3 @@
-<style src="./styles/global.scss" lang="scss"></style>
 <template>
   <div id="app">
     <div class="content">
@@ -11,7 +10,8 @@ export default {
   name: 'app',
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
+@import "styles/global";
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

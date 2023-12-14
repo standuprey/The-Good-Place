@@ -37,18 +37,15 @@ $project-transition-duration: 0.6s;
     left: 50%;
     width: $item-size;
     height: $item-size;
-    margin: -($item-size / 2);
-
-    $angle: (360 / $item-count);
+    margin: calc($item-size / -2);
+    $angle: calc(360 / $item-count);
     $rot: 240;
-
     @for $i from 1 through $item-count {
       &:nth-of-type(#{$i}) {
         transform: rotate($rot * 1deg)
-          translate($circle-size / 2)
+          translate(calc($circle-size / 2))
           rotate($rot * -1deg);
       }
-
       $rot: $rot + $angle;
     }
   }

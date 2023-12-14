@@ -1,2 +1,0 @@
-- pictures too close to text in pillars
-- scrolltotop on page load

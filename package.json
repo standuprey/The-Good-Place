@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "vue-cli-service serve",
-    "build": "vue-cli-service build && npm run s3 && npm run invalidate:cloudfront",
-    "s3": "cp aws* dist && cd dist && node ../node_modules/s3-upload/bin/s3-upload.js",
-    "invalidate:cloudfront": "aws cloudfront create-invalidation --distribution-id EM3ELOQMZEJNY --paths \"/*\" --profile perso"
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "npm run build && npm run s3:sync && npm run cloudfront:invalidate",
+    "s3:sync": "aws s3 sync dist s3://thegoodplaceinc.com --profile perso",
+    "cloudfront:invalidate": "aws cloudfront create-invalidation --distribution-id E2CXD2IVESLIU4 --paths \"/*\" --profile perso"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.5",
@@ -16,26 +17,20 @@
     "luxon": "^1.5.0",
     "matter-attractors": "^0.1.6",
     "matter-js": "^0.14.2",
-    "s3-upload": "^0.1.0",
     "vee-validate": "^2.0.3",
-    "vue": "^2.5.17",
+    "vue": "^2.7.0",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.0.1",
     "vue-toasted": "^1.1.25",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.4",
-    "@vue/cli-service": "^3.0.4",
+    "@vitejs/plugin-vue": "^1.10.2",
+    "eslint": "^8.55.0",
+    "eslint-plugin-vue": "^8.7.1",
     "sass": "^1.54.5",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.17",
-    "webpack": "^4.46.0"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
+    "vite": "^2.5.4",
+    "vite-plugin-vue2": "1.9.0"
   },
   "browserslist": [
     "> 1%",
